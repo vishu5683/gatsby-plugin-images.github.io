@@ -1,0 +1,18 @@
+.helloImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    margin: 0;
+  }
+
+  h2 {
+    text-align: center;
+    color: blueviolet;
+  }
+
+.image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
