@@ -13,8 +13,8 @@ const Static = () => {
 
     </div>
     <div className='image-container'>
-    <StaticImage src="./assets/sun1.jpg"  alt="pic12" width={400}  />
-<StaticImage src="./assets/demo2.jpg"  alt="pic2" width={400} />
+    <StaticImage src="./assets/sun1.jpg"  alt="pic12" width={400}  placeholder="blurred" />
+<StaticImage src="./assets/demo2.jpg"  alt="pic2" width={400}  placeholder="blurred"  />
 
 </div>
    </>
