@@ -7,6 +7,9 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+
+const path = require('path');
+
 module.exports = {
 
  pathPrefix: "/gatsby-plugin-images.github.io",
@@ -26,7 +29,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-source-filesystem`, 
       options: {
         
         name: `components`,
@@ -34,6 +37,23 @@ module.exports = {
         path: `${__dirname}/src/components`,
       },
     },
+    {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+              name: `components`,
+               path: path.join(__dirname, `src`, `components`), 
+            },
+           }, 
+         
+           {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+              name: `pages`,
+               path: path.join(__dirname, `src`, `pages`), 
+            },
+           }, 
+
+
   ],
 }
 

@@ -6,12 +6,12 @@ import './home.css';
 const HomeSection = () => {
   const data = useStaticQuery(graphql`
     query {
-      sun1: file(relativePath: { eq: "Section-1/assets/sun1.jpg" }) {
+      sun1: file(relativePath: { eq: "Section-1/assets/sun3.jpg" }) {
         childImageSharp {
           gatsbyImageData(width: 400, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
         }
       }
-      sun2: file(relativePath: { eq: "Section-1/assets/demo2.jpg" }) {
+      sun2: file(relativePath: { eq: "Section-1/assets/demo1.jpg" }) {
         childImageSharp {
           gatsbyImageData(width: 400, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
         }
