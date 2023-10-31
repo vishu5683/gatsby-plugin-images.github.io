@@ -14,10 +14,31 @@ module.exports = {
 
  pathPrefix: "/gatsby-plugin-images.github.io",
 
+ siteMetadata: {
+  title: "My Gatsby Site",
+},
+
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`, 
+    
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `components`,
+         path: path.join(__dirname, `src`, `components`), 
+      },
+     }, 
+   
+     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+         path: path.join(__dirname, `src`, `pages`), 
+      },
+     }, 
+
 
     {
       resolve: `gatsby-source-filesystem`,
@@ -38,21 +59,30 @@ module.exports = {
       },
     },
     {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-              name: `components`,
-               path: path.join(__dirname, `src`, `components`), 
-            },
-           }, 
-         
-           {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-              name: `pages`,
-               path: path.join(__dirname, `src`, `pages`), 
-            },
-           }, 
-
+      resolve: `gatsby-transformer-sharp`,
+      options: {
+        // The option defaults to true
+        checkSupportedExtensions: false,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`],
+          placeholder: `dominantColor`,
+          quality: 50,
+          breakpoints: [750, 1080, 1366, 1920],
+          backgroundColor: `transparent`,
+          tracedSVGOptions: {},
+          blurredOptions: {},
+          jpgOptions: {},
+          pngOptions: {},
+          webpOptions: {},
+          avifOptions: {},
+        }
+      }
+    },
 
   ],
 }

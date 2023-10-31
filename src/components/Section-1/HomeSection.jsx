@@ -8,19 +8,19 @@ const HomeSection = () => {
     query {
       sun1: file(relativePath: { eq: "Section-1/assets/sun3.jpg" }) {
         childImageSharp {
-          gatsbyImageData(width: 400, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+          gatsbyImageData(width: 400 ,placeholder: BLURRED
+            ,formats: [AUTO, WEBP, AVIF])
         }
       }
-      sun2: file(relativePath: { eq: "Section-1/assets/demo1.jpg" }) {
-        childImageSharp {
-          gatsbyImageData(width: 400, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
-        }
-      }
+    
     }
   `);
 
-  const image1 = getImage(data.sun1.childImageSharp);
-  const image2 = getImage(data.sun2.childImageSharp);
+  console.log(data); 
+
+  // const image1 = data.sun1 ? getImage(data.sun1.childImageSharp) : null;
+  // const image2 = getImage(data.sun2.childImageSharp);
+  const image1 = getImage(data.sun1);
 
   return (
     <>
@@ -32,9 +32,9 @@ const HomeSection = () => {
         <div className='image-container'>
           <GatsbyImage image={image1} alt='sun1.jpg' />
         </div>
-        <div className='image-container'>
+        {/* <div className='image-container'>
           <GatsbyImage image={image2} alt='demo2.jpg' />
-        </div>
+        </div> */}
       </div>
     </>
   );
