@@ -23,11 +23,18 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`, 
     
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `blogPosts`,
+    //     path: `${__dirname}/src/components/blogPosts`,
+    //   },
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `components`,
-         path: path.join(__dirname, `src`, `components`), 
+         path: path.join(__dirname, `src`,`components`), 
       },
      }, 
    
@@ -40,24 +47,24 @@ module.exports = {
      }, 
 
 
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
     
-        name: `pages`,
+    //     name: `pages`,
         
-        path: `${__dirname}/src/pages`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`, 
-      options: {
+    //     path: `${__dirname}/src/pages`,
+    //   },
+    // },
+    // {
+    //   resolve: `gatsby-source-filesystem`, 
+    //   options: {
         
-        name: `components`,
+    //     name: `components`,
         
-        path: `${__dirname}/src/components`,
-      },
-    },
+    //     path: `${__dirname}/src/components`,
+    //   },
+    // },
     {
       resolve: `gatsby-transformer-sharp`,
       options: {
@@ -65,24 +72,24 @@ module.exports = {
         checkSupportedExtensions: false,
       },
     },
-    {
-      resolve: `gatsby-plugin-sharp`,
-      options: {
-        defaults: {
-          formats: [`auto`, `webp`],
-          placeholder: `dominantColor`,
-          quality: 50,
-          breakpoints: [750, 1080, 1366, 1920],
-          backgroundColor: `transparent`,
-          tracedSVGOptions: {},
-          blurredOptions: {},
-          jpgOptions: {},
-          pngOptions: {},
-          webpOptions: {},
-          avifOptions: {},
-        }
-      }
-    },
+    // {
+    //   resolve: `gatsby-plugin-sharp`,
+    //   options: {
+    //     defaults: {
+    //       formats: [`auto`, `webp`],
+    //       placeholder: `dominantColor`,
+    //       quality: 50,
+    //       breakpoints: [750, 1080, 1366, 1920],
+    //       backgroundColor: `transparent`,
+    //       tracedSVGOptions: {},
+    //       blurredOptions: {},
+    //       jpgOptions: {},
+    //       pngOptions: {},
+    //       webpOptions: {},
+    //       avifOptions: {},
+    //     }
+    //   }
+    // },
 
   ],
 }

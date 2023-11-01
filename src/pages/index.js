@@ -5,6 +5,7 @@ import HomeSection from "../components/Section-1/HomeSection"
 import Static from "../components/Section-1/Static"
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import BlogPost from "../components/Section-1/blogPost";
 
 
 export default function Home() {
@@ -37,6 +38,9 @@ const image1 = getImage(data.sun1.childImageSharp);
     <HomeSection/>
 
 <Static/>
+
+
+{/* <BlogPost/> */}
     </>
   )
 }
